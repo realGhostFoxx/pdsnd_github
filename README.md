@@ -1,14 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+This project has been created on February 16th 2020.
 
-### Project Title
-Replace the Project Title
+### US Bikeshare Data Project
+Python code file enclosed.
 
 ### Description
-Describe what your project is about and what it does
+The python code is used to select among 3 existing CSV files and deep dive among the 300k+ lines of data.
 
 ### Files used
-Include the files used
+3 cities raw data in csv format (not included in this repo) and Bikeshare.py file.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Shoutout to Udacity Programming for DS Nanodegree for providing the raw data csv's and overall class content needed to create this repo!
