@@ -56,7 +56,7 @@ def get_filters():
             print('Showing data for: ', user_input_day.title())
             break
 
-    print('-'*40)
+    print('+'*40)
     return city, month, day
 
 
@@ -116,7 +116,7 @@ def time_stats(df):
     print('..aaand finally, the most common hour was: ', popular_hour)
 
     print("\nThis whole operation took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('+'*40)
 
 
 def station_stats(df):
@@ -139,7 +139,7 @@ def station_stats(df):
     print('The most frequent combination of start and end stations are:', most_common_combo)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('+'*40)
 
 
 def trip_duration_stats(df):
@@ -157,7 +157,7 @@ def trip_duration_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('+'*40)
 
 
 def user_stats(df):
@@ -194,7 +194,7 @@ def user_stats(df):
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('+'*40)
 
 
     raw_data = input('Would you like to see some raw data from our dataframe? Enter yes or no.\n').lower()
