@@ -104,14 +104,11 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
     popular_month = df[['Month']].mode().iloc[0][0]
     print('The most common month was: ', popular_month)
 
-    # TO DO: display the most common day of week
     popular_day = df[['Day_of_week']].mode().iloc[0][0]
     print('The most common day of the week was: ', popular_day)
-    # TO DO: display the most common start hour
     popular_hour = df[['Hour']].mode().iloc[0][0]
     print('..aaand finally, the most common hour was: ', popular_hour)
 
@@ -125,15 +122,12 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
     most_common_station = df['Start Station'].mode()[0]
     print('The most commonly used start station is: ', most_common_station)
 
-    # TO DO: display most commonly used end station
     most_common_stop = df['Start Station'].value_counts().idxmax()
     print('The most commonly used stop station is: ', most_common_stop)
 
-    # TO DO: display most frequent combination of start station and end station trip
     most_common_combo = df.groupby(['Start Station', 'End Station']).size().idxmax()
 
     print('The most frequent combination of start and end stations are:', most_common_combo)
@@ -148,10 +142,8 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
     total_time = df['Total Travel Time'] = pd.to_timedelta(df['End Time']) - pd.to_timedelta(df['Start Time'])
     print('So adding together all trips, we\'d get up to a total time of', total_time.sum())
-    # TO DO: display mean travel time
     df['Total Time'] = df['End Time'] - df['Start Time']
     print('Also, by power of maths, we got up to an average trip time of', df['Total Time'].mean()/60)
 
@@ -166,21 +158,17 @@ def user_stats(df):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
     user_type = df.groupby(['User Type']).count()
     if user_type.shape[0] == 2:
         print('Based on our data, we have', user_type['Start Time'][0], 'Customers, and', user_type['Start Time'][1], 'Subscribers!')
     elif user_type.shape[0] == 3:
         print('Based on our data, we have', user_type['Start Time'][0], 'Customers,', user_type['Start Time'][1], 'Dependents and ', user_type['Start Time'][2], 'Subscribers!')
 
-    # TO DO: Display counts of gender
     if 'Gender' not in df:
         print('We don\'t seem to have any gender data for this city, though - blame GDPR!')
     else:
         gender_type = df.groupby(['Gender']).count()
         print('Based on our data, we have', gender_type['Start Time'][0], 'Female Users, and', gender_type['Start Time'][1], 'Male Users!')
-
-    # TO DO: Display earliest, most recent, and most common year of birth
 
     if 'Birth Year' not in df.columns:
         print('We can\'t show you any data about user birthdays :(, as we don\'t have them stored!')
