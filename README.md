@@ -1,14 +1,14 @@
 ### Date created
-I've created this file on February 16th 2020.
+This project has been created on February 16th 2020.
 
-### Udacity Git Project
-This is a project part of the Udacity Programming for DS Nanodegree.
+### US Bikeshare Data Project
+Python code file enclosed.
 
 ### Description
-This is a project showcasing my git abilities. Gitting good, I hope :)
+The python code is used to select among 3 existing CSV files and deep dive among the 300k+ lines of data.
 
 ### Files used
-bikeshare.py as Python file.
+3 cities raw data in csv format (not included in this repo) and Bikeshare.py file.
 
 ### Credits
-Repo forked from Udacity.
+Shoutout to Udacity Programming for DS Nanodegree for providing the raw data csv's and overall class content needed to create this repo!
